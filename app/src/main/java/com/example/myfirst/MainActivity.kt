@@ -12,16 +12,14 @@ class MainActivity : AppCompatActivity() {
 
         btn1.setOnClickListener {
             val name = nameText.text.toString()
-            if (name == null || name.trim() == "")
+            if (name.trim() == "")
                 Toast.makeText(
                     this@MainActivity,
                     "nama tidak boleh kosong",
                     Toast.LENGTH_SHORT
-                )
+                ).show()
             else
-                textBase.setText(name)
+                textBase.text = name
         }
     }
-
-
 }
